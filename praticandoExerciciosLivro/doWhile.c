@@ -2,16 +2,19 @@
 #include <locale.h>
 
 int main() {
-    
     setlocale(LC_ALL, "Portuguese");
 
     char nome[30];
     int i;
 
-    printf("Digite o seu nome: ");
+    printf("Digite seu nome: ");
     scanf("%s", &nome);
 
-    for (i = 1; i <= 10; i++)
-        printf("\n Seu nome está aqui: %s", nome);
-    return (0);
+    i = 1;
+
+    do
+    {
+        printf("\n %d - %s ", i, nome);
+        i++;
+    } while (i != 11);    
 }
